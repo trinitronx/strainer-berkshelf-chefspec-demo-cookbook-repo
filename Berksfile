@@ -7,7 +7,7 @@ site :opscode
 
 cookbook 'chef-solo-search', github: 'edelight/chef-solo-search', tag: '0.4.0'
 
-cookbook 'strainer-berkshelf-chefspec-demo-cookbook-repo', github: 'trinitronx/strainer-berkshelf-chefspec-demo-cookbook-repo'
+cookbook 'strainer-berkshelf-chefspec-demo-cookbook-repo', github: 'trinitronx/strainer-berkshelf-chefspec-recursive-bug'
 
 ## Not valid in top-level chef repo
 #metadata

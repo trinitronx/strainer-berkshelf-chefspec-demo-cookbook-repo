@@ -4,6 +4,11 @@
       "locked_version": "0.4.0",
       "git": "git://github.com/edelight/chef-solo-search.git",
       "ref": "5ba022d02c51cafc7b5323c1209fbb7936e4f60b"
+    },
+    "strainer-berkshelf-chefspec-demo-cookbook-repo": {
+      "locked_version": "0.1.0",
+      "git": "git://github.com/trinitronx/strainer-berkshelf-chefspec-recursive-bug.git",
+      "ref": "902e2a4a67cd56f2853f3e7763d8bb62d6bc0137"
     }
   }
 }
