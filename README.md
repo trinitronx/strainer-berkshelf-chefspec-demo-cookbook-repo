@@ -2,15 +2,34 @@ strainer-berkshelf-chefspec-recursive-bug Cookbook
 ==================================================
 This cookbook is a demo cookbook for reproducing a bug in [Strainer](https://github.com/customink/strainer).  It includes a semi-workaround for the recursive creation of `vendor/cookbooks` directories.
 
-It also demonstrates a couple useful things for testing Chef cookbooks:
+To reproduce the bug:
 
- - A way to detect that Strainer is in use from within rspec
+ 1. Run `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug && bundle exec rspec`
+ 2. Notice 1 test passes
+ 3. Run `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug && strainer test`
+ 4. Notice output `2 examples, 0 failures`, duplicated RSpec tests, and recursively copied path in Strainer sandbox: 
+ `#{Strainer.sandbox_path.to_s}/strainer-berkshelf-chefspec-recursive-bug/vendor/cookbooks/strainer-berkshelf-chefspec-recursive-bug/spec/`
+ 5. Repeat Step 1.
+ 6. Repeat Step 3.
+ 7. Notice yet another recursive directory created in `vendor/cookbooks`, and tests fail with **LoadError**:
+ `#{Strainer.sandbox_path.to_s}/strainer-berkshelf-chefspec-recursive-bug/vendor/cookbooks/strainer-berkshelf-chefspec-recursive-bug/vendor/cookbooks/strainer-berkshelf-chefspec-recursive-bug/spec/default_spec.rb`
+
+Please see `spec/spec_helper.rb` for some debug info & help to see what is going on.
+
+It also intends to be a [development spike](http://www.extremeprogramming.org/rules/spike.html) and demonstrates a couple useful things for testing Chef cookbooks:
+
+ - A way to detect that Strainer is in use from within rspec.
  - The use of [chefspec](https://github.com/acrmp/chefspec), a gem that enables you to write rspec tests for your chef recipes without having to actually run them on a node.
  - Allowing the testing a cookbook with dependencies via standalone rspec: `bundle exec rspec` (by using [Berkshelf](http://berkshelf.com/))
+ - The use of encrypted data bags within chefspec tests.
+ - Some useful chefspec helpers (See: `spec/support/chefspec_helpers.rb`)
+ - How to allow the use of encrypted data bags within chefspec tests + a chefspec helper to stub out data bags.
+ - Cookbook repo & Chef repo structure required to test multiple ways using Strainer.
 
-You can [learn about chefspec here](https://www.relishapp.com/acrmp/chefspec/docs) You can [learn about RSpec here](https://www.relishapp.com/rspec) And of course chef is at http://wiki.opscode.com/display/chef/Home
+You can [learn about chefspec here](https://www.relishapp.com/acrmp/chefspec/docs). You can [learn about RSpec here](https://www.relishapp.com/rspec).
+You can [learn about Strainer here](https://github.com/customink/strainer). And of course chef can be found at [Opscode](http://wiki.opscode.com/display/chef/Home)
 
-To install: clone this repo, install Bundler (gem install bundler), and install the chefspec gems via bundler (bundle install).
+To install: clone this repo, install Bundler (`gem install bundler`), and install the chefspec gems via bundler (`bundle install`).
 
 You can run the tests any of 4 ways:
 
