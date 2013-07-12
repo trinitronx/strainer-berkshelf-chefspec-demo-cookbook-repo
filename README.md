@@ -6,7 +6,7 @@ To reproduce the bug:
 
  1. Run `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug && bundle exec rspec`
  2. Notice 1 test passes
- 3. Run `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug && strainer test`
+ 3. Run `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug; strainer test`
  4. Notice output `2 examples, 0 failures`, duplicated RSpec tests, and recursively copied path in Strainer sandbox: 
  `#{Strainer.sandbox_path.to_s}/strainer-berkshelf-chefspec-recursive-bug/vendor/cookbooks/strainer-berkshelf-chefspec-recursive-bug/spec/`
  5. Repeat Step 1.
@@ -37,8 +37,8 @@ You can run the tests any of 4 ways:
    - `bundle exec rspec cookbooks/strainer-berkshelf-chefspec-recursive-bug/`
    - `strainer test strainer-berkshelf-chefspec-recursive-bug` (optionally add: `-d` for strainer's debug output)
  3. Within the cookbook dir itself:
-   - `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug && bundle exec rspec`
-   - `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug && strainer test`
+   - `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug; bundle exec rspec`
+   - `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug; strainer test`
 
 Requirements
 ------------
