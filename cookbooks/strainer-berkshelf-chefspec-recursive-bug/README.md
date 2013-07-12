@@ -31,10 +31,9 @@ You can [learn about Strainer here](https://github.com/customink/strainer). And 
 
 To install: clone this repo, install Bundler (`gem install bundler`), and install the chefspec gems via bundler (`bundle install`).
 
-You can run the tests any of 4 ways:
+You can run the tests any of 3 ways:
 
  1. Within the fake chef repo:
-   - `bundle exec rspec cookbooks/strainer-berkshelf-chefspec-recursive-bug/`
    - `strainer test strainer-berkshelf-chefspec-recursive-bug` (optionally add: `-d` for strainer's debug output)
  3. Within the cookbook dir itself:
    - `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug; bundle exec rspec`
@@ -64,6 +63,14 @@ Just include `strainer-berkshelf-chefspec-recursive-bug` in your node's `run_lis
   ]
 }
 ```
+
+Known Bugs
+----------
+
+Currently cannot run RSpec from top-level chef repo due to *Chef::Exceptions::CookbookNotFound*:
+
+  - [ ] Fix `bundle exec rspec cookbooks/strainer-berkshelf-chefspec-recursive-bug/`
+
 
 Contributing
 ------------
