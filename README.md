@@ -1,3 +1,9 @@
+strainer-berkshelf-chefspec-demo-cookbook-repo
+==============================================
+This is a fake Chef Repo structure to demonstrate the usage of chefspec, Strainer, and Berkshelf for cookbook management and testing. 
+It contains a cookbook to reproduce a bug in Strainer, and demonstrate some useful things.
+
+
 strainer-berkshelf-chefspec-recursive-bug Cookbook
 ==================================================
 This cookbook is a demo cookbook for reproducing a bug in [Strainer](https://github.com/customink/strainer).  It includes a semi-workaround for the recursive creation of `vendor/cookbooks` directories.
@@ -45,31 +51,13 @@ Requirements
 #### packages
 - `chef-solo-search` - strainer-berkshelf-chefspec-recursive-bug needs chef-solo-search to test recipes that use search.
 
-Attributes
-----------
-N/A
-
-Usage
------
-#### strainer-berkshelf-chefspec-recursive-bug::default
-
-Just include `strainer-berkshelf-chefspec-recursive-bug` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[strainer-berkshelf-chefspec-recursive-bug]"
-  ]
-}
-```
 
 Known Bugs
 ----------
 
 Currently cannot run RSpec from top-level chef repo due to *Chef::Exceptions::CookbookNotFound*:
 
-  - [ ] Fix `bundle exec rspec cookbooks/strainer-berkshelf-chefspec-recursive-bug/`
+ - [ ] Fix `bundle exec rspec cookbooks/strainer-berkshelf-chefspec-recursive-bug/`
 
 
 Contributing
