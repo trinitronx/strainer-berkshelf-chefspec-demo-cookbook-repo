@@ -5,9 +5,9 @@ This cookbook is a demo cookbook for reproducing a bug in [Strainer](https://git
 To reproduce the bug:
 
  1. Run `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug && bundle exec rspec`
- 2. Notice 1 test passes
+ 2. Notice tests pass with `4 examples, 0 failures` 
  3. Run `cd cookbooks/strainer-berkshelf-chefspec-recursive-bug; strainer test`
- 4. Notice output `2 examples, 0 failures`, duplicated RSpec tests, and recursively copied path in Strainer sandbox: 
+ 4. Notice output `8 examples, 0 failures`, duplicate RSpec tests, and recursively copied path in Strainer sandbox: 
  `#{Strainer.sandbox_path.to_s}/strainer-berkshelf-chefspec-recursive-bug/vendor/cookbooks/strainer-berkshelf-chefspec-recursive-bug/spec/`
  5. Repeat Step 1.
  6. Repeat Step 3.
