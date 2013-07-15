@@ -1,0 +1,21 @@
+{
+  "id": "media-assets",
+  "user_name": {
+    "encrypted_data": "cz6MLg8ITEo31kc9svoWVE1/WXcOqgfp+e6zsfDMRO8=\n",
+    "iv": "Moy8NEtP1gk59LDi/BVTLg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "access_key_id": {
+    "encrypted_data": "npUIgP4DrNClv5/q6UOUj0ukTclbrw0/SCvqw60RB3Ef1LfgJmJNytKyCz17\nxUFn\n",
+    "iv": "OONHKA6lBb2M9FBo22dXGQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "secret_access_key": {
+    "encrypted_data": "kpvIoP2T7WhW9ngIf2/+C4v8AS+/38mQFJlpMD7w92EpUjweJC0fkXwpDLEf\nygXhiPIUhZlW4d7+aP7x/YM+RQ==\n",
+    "iv": "950OYaUPrOaTeltlcfFscA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

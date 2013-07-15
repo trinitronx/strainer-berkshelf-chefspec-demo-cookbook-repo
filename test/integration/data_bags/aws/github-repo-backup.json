@@ -1,0 +1,21 @@
+{
+  "id": "github-repo-backup",
+  "user_name": {
+    "encrypted_data": "KG0+dYUgGYv2GDhoatHKNzTaMnn9CMwuIGhGxjC8F38ZBmPHRXFi2CqRn3yu\nZBXf\n",
+    "iv": "n3bxNI3rKJbWHiFMUDwVuw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "access_key_id": {
+    "encrypted_data": "n/f+puC8s1gVIX6mCNeCmh6DlJ3TyznYJ35q+hZKDYpN9wNFHXgpm6zH/l6l\nq2oN\n",
+    "iv": "xi0t2Bzfwb+YDKfwgYYgJw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "secret_access_key": {
+    "encrypted_data": "8G9rry9Kncg8OMkpTflIKGUROaiQg3c2IGL7GAZK+kCif0f55J7Bc+ULXrvj\n8ofQYctNW7DpWGNgaxySy2gwzw==\n",
+    "iv": "28RHHBJnG44ffqxP2Vm2PQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

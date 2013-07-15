@@ -1,0 +1,21 @@
+{
+  "id": "s3-log-upload",
+  "user_name": {
+    "encrypted_data": "pxohGMiUYbUZtnVjmW93fA6WJ48yBCeX6aKlPuRAi/al1pmA5x06pkfXYq5b\nv0eO\n",
+    "iv": "Pn49HOc6XMHjLX9qrbu9KA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "access_key_id": {
+    "encrypted_data": "JGz2/GO2gdy1G6qAFeZAC/FLYMmf5TXrgnCeBo3JQECclTqujNG6dbl5VqI7\npdt6\n",
+    "iv": "CYVYKRk7LCx10pyh53hYgw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "secret_access_key": {
+    "encrypted_data": "raav2ADzr2iKZTUgJY0gPbrMLPo8HB4ZRcK2A5AWuL0NuVl8YvmoXF5KS7Go\nZNfDCu6RxHb//jy+W0a97jaWsg==\n",
+    "iv": "odgsDfN+8pv5IeOnmYnPvg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
