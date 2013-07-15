@@ -1,0 +1,21 @@
+{
+  "id": "database-backup",
+  "user_name": {
+    "encrypted_data": "UoJ+NMmAsSI0maj14pf/Up9+Ei5UXo+frZOYurLP1Vyrx0/2yVTY7LLXmXCM\nrB3T\n",
+    "iv": "4O1slc6LfOpathtXBT1Umw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "access_key_id": {
+    "encrypted_data": "drp0tDdHKFLLmr1qdOed+A7IlvXmFJDkxmla1CwQoz7uF3KzalEcyuCSkrUx\nkea4\n",
+    "iv": "ADvF5NhmveL0WDcAAoUFfg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "secret_access_key": {
+    "encrypted_data": "B6XlEn0zWv7BSydWlkES2JoijK0YjJsIRAasE54bHThdG7SY7csgZKWq2mac\nB7cjVGf8u896K/BXm6qeRpleAA==\n",
+    "iv": "6s05l85qM2BLUNy49gzx2A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

@@ -1,7 +1,7 @@
 module ChefSpecHelpers
     def setup_chefspec
 
-        ## Lots of crappy boilerplate stuff we need to do for chefspec to work
+        ## Lots of crappy boilerplate stuff we need to do for chefspec to work with (encrypted) data bags
         Chef::Config[:data_bag_path] = File.join(File.dirname(__FILE__), '../../test/integration/data_bags')
         Chef::Config[:solo] = true
         Chef::Config[:encrypted_data_bag_secret] = "#{ENV['HOME']}/.chef/encrypted_data_bag_secret"
@@ -15,8 +15,12 @@ end
 
 module ChefSpecStubHelpers
     def stub_data_bag(args, retval)
-        Chef::DataBagItem.any_instance.stub(:data_bag_item).and_return(Hash.new)
-        Chef::DataBagItem.any_instance.stub(:data_bag_item).with(args).and_return(retval)
+        Chef::Recipe.any_instance.stub(:data_bag_item).and_return(Hash.new)
+        if args.is_a? Array
+            Chef::Recipe.any_instance.stub(:data_bag_item).with(*args).and_return(retval) # Call with asterisk to pass args array as separate args to '#with'
+        else
+            Chef::Recipe.any_instance.stub(:data_bag_item).with(args).and_return(retval)
+        end
     end
 end
 
