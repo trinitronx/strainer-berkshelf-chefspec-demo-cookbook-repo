@@ -1,0 +1,10 @@
+{
+  "id": "demo",
+  "password": "!!",
+  "groups": ["demo"],
+  "uid": 1020,
+  "gid": 1020,
+  "shell": "/bin/bash",
+  "comment": "Demo Account",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQDMXmEnQOf6GzmdrSVQ+CCjDeEX7hJZ23zKA3yRjzu8dCmZ4m58+dbnpFbz3tpiYk3tFs0sOPYbkFQWXPfTSpRBTyORjoZz96h1IOUUNgxqnB7ARxe1j1ihJ/wYSD2RObHWqFby2SULLu9eA9xt38lKO6ePjnKj+a0V1LCPXuR14Q== demouser@example.com"
+}
